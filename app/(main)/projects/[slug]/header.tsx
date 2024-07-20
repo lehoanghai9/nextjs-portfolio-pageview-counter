@@ -18,7 +18,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
   const [isIntersecting, setIntersecting] = useState(true);
 
   const links: { label: string; href: string }[] = [];
-  if (project.repository && project.repository !== "false\r") {
+  if (project.repository && project.repository !== "falsee\r") {
     links.push({
       label: "GitHub",
       href: `https://github.com/${project.repository}`,
