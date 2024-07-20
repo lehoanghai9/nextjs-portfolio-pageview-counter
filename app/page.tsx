@@ -29,23 +29,40 @@ export default function Home() {
         quantity={100}
       />
       <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-        chronark
+        Hai Le Hoang
       </h1>
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
-        <h2 className="text-sm text-zinc-500 ">
-          I'm building{" "}
-          <Link
-            target="_blank"
-            href="https://unkey.dev"
-            className="underline duration-500 hover:text-zinc-300"
-          >
-            unkey.dev
-          </Link> to solve API authentication and authorization for developers.
-        </h2>
+        <Badge>
+          <h2 className="text-sm text-zinc-500 ">
+            I'm building{" "}
+            <Link
+              target="_blank"
+              href="https://boppo.hu"
+              className="underline duration-500 hover:text-zinc-300"
+            >
+              boppo.hu
+            </Link>{" "}
+            , an online multi-vendor marketplace application.
+          </h2>
+        </Badge>
       </div>
     </div>
   );
-
 }
+
+const Badge = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <span className="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+      <svg
+        viewBox="0 0 6 6"
+        aria-hidden="true"
+        className="h-1.5 w-1.5 fill-green-400"
+      >
+        <circle r={3} cx={3} cy={3} />
+      </svg>
+      {children}
+    </span>
+  );
+};
